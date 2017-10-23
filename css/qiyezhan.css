@@ -22,7 +22,6 @@ header{
 main{
 	width: 1040px;
 	height: 100%;
-	/* background-color: skyblue; */
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -43,21 +42,21 @@ main{
 nav{
 	width: 800px;
 	height: 50px;
-	/* background-color: green; */
 	float: right;
 	margin-right: 18px;
 	margin-top: 24px;
 }
 .div-nav{
 	height: 50px;
-	/* background-color: pink; */
 	float: right;
+	position: relative;
 	
 }
 .nav-zi{
 	height: 50px;
 	font-size: 14px;
-	color: #666666;
+	font-weight: bold;
+	color: #666;
 	line-height: 50px;
 	float: left;
 	margin-right: 20px;
@@ -67,7 +66,7 @@ nav{
 	margin-right: 0;
 }
 .nav-zi:hover{
-	color: red;
+	color:#000000;
 }
 
 
@@ -76,41 +75,70 @@ nav{
 #banner{
 	width: 100%;
 	height: 500px;
-	background-color: pink;
+	position: relative;
+}
+#banner .bannerbox{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	cursor: pointer;
+}
+#banner .bannerimg1{
+	width: 100%;
+	height: 500px;
 	background-image: url("../img/1.jpg");
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	position: relative;
-}
-.button1{
-	width: 71px;
-	height: 71px;
-	background-color: rgba(181, 181, 181, 0.6 );
-	border-radius: 5px;
 	position: absolute;
-	top: 215px;
-	left: 13px;
-	font-size: 38px;
-	color: #fff;
-	line-height: 71px;
-	text-align: center;
-	display: block;
-}
-.button2{
-	width: 71px;
-	height: 71px;
-	background-color: rgba(181, 181, 181, 0.6 );
-	border-radius: 5px;
-	position: absolute;
-	top: 215px;
-	right: 13px;
-	font-size: 38px;
-	color: #fff;
-	line-height: 71px;
-	text-align: center;
-	display: block;
+	top: 0;
+	left: 0;
+	opacity: 1;
+	z-index:900;
+	transition: all 1s;
 }
 
+#banner .bannerimg2{
+	width: 100%;
+	height: 500px;
+	background-image: url("../img/28.jpg");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 1s;
+}
+
+#banner .iconfont{
+	width: 71px;
+	height: 71px;
+	background-color: rgba(181, 181, 181, 0.6 );
+	border-radius: 5px;
+	position: absolute;
+	top: 215px;
+	font-size: 38px;
+	color: #fff;
+	line-height: 71px;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	transition: all 1s;
+	z-index: 9999;
+	user-select: none;
+}
+#banner .button1{
+	left: 13px;
+}
+#banner .button2{
+	right: 13px;
+}
+#banner .button1:hover{
+	background: rgba(149, 149, 149, 1);
+}
+#banner .button2:hover{
+	background: rgba(149, 149, 149, 1);
+}
 
 /* 内容开始 */
 .content{
@@ -129,20 +157,12 @@ nav{
 .two{
 	position: relative;
 }
-/* .img-content{
-	width: 182px;
-	height: 130px;
-	background-color: red;
-	display: block;
-} */
-.content-tupian{
-	opacity: 1;
-}
 .content-tupian1{
 	position: absolute;
 	top: 0;
 	left: 0;
 	opacity: 0;
+	transition: all .5s;
 }
 .content-tupian1:hover{
 	opacity: 1;
@@ -187,7 +207,6 @@ p:nth-child(3){
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	/* position: relative; */
 }
 .one{
 	position: relative;
@@ -197,14 +216,12 @@ p:nth-child(3){
 	width: 195px;
 	height: 325px;
 }
-.anli-tupian:hover{
-	opacity: 0;
-}
 .anli-tupian1{
 	position: absolute;
 	top: 0;
 	left: 0;
 	opacity: 0;
+	transition: all 1s;
 }
 .anli-tupian1:hover{
 	opacity: 1;
@@ -214,6 +231,7 @@ p:nth-child(3){
 	top: 0;
 	left: 0;
 	opacity: 0;
+	transition: all 1s;
 }
 .anli-tupian2:hover{
 	opacity: 1;
@@ -226,13 +244,10 @@ p:nth-child(3){
 .about{
 	width: 100%;
 	height: 505px;
-	background-color: green;
 	background: url("../img/14.png") center/cover;
 }
 .about p{
 	width: 100%;
-	/* height: 25px; */
-	/* background-color: red; */
 	margin-top: 130px;
 	text-align: center;
 }
@@ -250,9 +265,8 @@ p:nth-child(3){
 	margin-top: 60px;
 	width: 100%;
 	line-height: 25px;
-	/* background-color: red; */	
 	font-size: 18px;
-	font-weight: bolder;
+	font-weight: 900;
 	text-align: center;
 	color: #000000;
 }
@@ -275,12 +289,10 @@ p:nth-child(3){
 }
 .fuwu-zi{
 	height: 29px;
-	/* background-color: yellow; */
 	margin-top: 48px;
 	text-align: center;
 }
 .fuwu-zi .iconfont{
-	/* background-color: red; */
 	font-size: 22px;
 	line-height: 29px;
 }
